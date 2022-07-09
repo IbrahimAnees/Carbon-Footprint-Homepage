@@ -1,0 +1,299 @@
+<!-- Carbon Tiptoe HTML Code -->
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- HEAD -->
+    <head>
+        <!-- Title and meta-data -->
+        <title>Carbon Tiptoe</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Carbon Tiptoe is a free-to-use carbon footprint calculator!">
+        <meta name="keywords" content="carbon, tiptoe, footprint, calculator">
+        <meta name="author" content="Ibrahim Anees">
+
+        <!-- Website icon -->
+        <link rel="shortcut icon" type="image" href="logo.png">
+
+        <!-- w3schools stylesheets -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+
+        <!-- CSS stylesheets -->
+        <link rel="stylesheet" href="style.css">
+        <style>
+           body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+           body {font-size:16px;}
+           .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+           .w3-half img:hover{opacity:1}
+        </style>
+
+        <!-- Fontawesome symbol -->
+        <script src="https://kit.fontawesome.com/b8cb5898fd.js" crossorigin="anonymous"></script>
+    </head>
+
+    <!-- BODY -->
+    <body class="similar-background-color-2">
+        
+        <!-- JAVASCRIPT FILE FOR FUNCTIONS -->
+        <script src = script.js></script>
+
+
+        <!-- NAVIGATION BAR -->
+        <nav class="complementary-background-color w3-sidebar w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="navBar">
+            <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft hover-green similar-color-1 similar-background-color-3" style="width:100%;font-size:24px;">CLOSE MENU</a>
+            <div class="w3-bar-block similar-color-1">
+                <!-- Logo -->
+                <div class="w3-container similar-color-1">
+                    <h1 style="padding-top:64px; padding-bottom: 32px"><b>Carbon<br>Tiptoe <i class="fa-solid fa-leaf"></i></b></h1>
+                </div>
+                    <!-- Login/Signup/Search buttons -->
+                    <button class="similar-background-color-2 hover-green similar-color-1 w3-button w3-large" type="button" >LOGIN</button>
+                    <button class="similar-background-color-2 hover-green similar-color-1 w3-button w3-large" type="button" >SIGNUP</button>
+                    <button class="similar-background-color-2 hover-green similar-color-1 w3-button w3-large" type="button" ><i class="fa fa-search"></i></button>
+                    <br> <br>
+
+                    <!-- Navigation buttons -->
+                    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button hover-green w3-large">HOME</a> 
+                    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button hover-green w3-large">ABOUT</a> 
+                    <a href="#how-it-works" onclick="w3_close()" class="w3-bar-item w3-button hover-green w3-large">HOW IT WORKS</a> 
+                    <a href="#history" onclick="w3_close()" class="w3-bar-item w3-button hover-green w3-large">HISTORY</a> 
+                    <a href="#statistics" onclick="w3_close()" class="w3-bar-item w3-button hover-green w3-large">STATISTICS</a> 
+                    <a href="#improve" onclick="w3_close()" class="w3-bar-item w3-button hover-green w3-large">IMPROVE</a> 
+                    <br> <br>
+                    <!-- Other pages -->
+                    <a href="#donate" class="w3-bar-item w3-button hover-green w3-large">DONATE ></a> 
+                    <a href="#sponsors" class="w3-bar-item w3-button hover-green w3-large">SPONSORS ></a> 
+                    <a href="#contact" class="w3-bar-item w3-button hover-green w3-large">CONTACT US ></a> 
+            </div>
+        </nav>
+
+        <!-- NAVIGATION BAR (SMALL SCREENS) -->
+        <header class="w3-container w3-top w3-hide-large w3-xlarge w3-padding complementary-background-color">
+            <a href="javascript:void(0)" class="w3-button complementary-background-color w3-margin-right similar-color-1 hover-green w3-xlarge" onclick="w3_open()">☰</a>
+        </header>
+
+        <!-- Overlay effect when opening sidebar on small screens -->
+        <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+         <!-- REGISTRATION FORM -->
+        <div id="registration-form" class="w3-modal">
+            <div class="w3-modal-content w3-animate-zoom similar-background-color-2">
+                <!-- Header -->
+                <div class="w3-container complementary-background-color similar-color-1 w3-display-container">
+                    <span onclick="close_form()" class="w3-button w3-display-topright w3-xlarge hover-green">x</span>
+                    <h3><b>Register for Carbon Tiptoe <i class="fa-solid fa-leaf"></i></b></h3>
+                </div>
+                
+                <div class = "w3-large custom-color w3-content" style="padding-left:80px">
+                    <p>To fill out this form, please fill all the required fields and click Submit.</p>
+                </div>
+
+                <!-- Form -->
+                <div id="ct-form" tabindex="0" style="padding-right:50px; padding-left:50px">
+                    <form class="custom-color">
+                        <!-- User details -->
+                        <div id="userDetails" class="w3-section" style="padding-left:30px; padding-right:30px">
+                            <label>Given name *</label>
+                            <input class="w3-input w3-border w3-small" type="text" name="Name" required> 
+                            <label>Surname *</label>
+                            <input class="w3-input w3-border w3-small" type="text" name="Name" required>
+                            <label>Username *</label>
+                            <input class="w3-input w3-border w3-small" type="text" name="Name" required>
+                            <label>Password *</label>
+                            <input class="w3-input w3-border w3-small" type="password" name="Name" required>
+                        </div>
+
+                        <!-- Addresses -->
+                        <div id="addresses" class="w3-section" style="padding:30px">
+                            <label>Home Address *</label>
+                            <input class="w3-input w3-border w3-small" type="text" name="Name" required>
+                            <label>Work Address</label>
+                            <input class="w3-input w3-border w3-small" type="text" name="Name">
+                        </div>
+
+                        <!-- Contacts -->
+                        <div id="contacts" class="w3-section" style="padding:30px">
+                            <label>Mobile Number *</label>
+                            <input class="w3-input w3-border w3-small" type="number" name="Name" required>
+                            <label>Email *</label>
+                            <input class="w3-input w3-border w3-small" type="email" name="Name" required>
+                        </div >
+
+                        <!-- Submit button -->
+                        <div align="center">
+                            <button  type="submit" class="w3-button w3-padding-large complementary-background-color similar-color-1 w3-margin-bottom hover-green" ><b>SUBMIT</b></button>
+                            <br> <br>
+                        </div>
+                    </form>  
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- START OF PAGE CONTENT -->
+        <div class="w3-main" style="margin-left:300px;margin-right:0px;padding-bottom:50px;">
+        
+            <div style="background-image:url(header.jpg); margin-top:0px">
+                <!-- LOGO -->
+                <div class="w3-container" style="padding-top:80px">
+                    <h1 class="w3-jumbo w3-center similar-color-2" style="letter-spacing: 3.1px"><b>Carbon Tiptoe <i class="fa-solid fa-leaf"></i></b></h1>
+                    <h1 class="w3-large w3-center similar-color-2" style="letter-spacing: 3.1px;"><b>COMPREHENSIVE CARBON FOOTPRINT CALCULATOR </i></b></h1>
+                </div>
+            
+                <!-- REGISTER BUTTON -->
+                <div style="padding-top:30px; padding-bottom:150px">
+                    <center> 
+                    <button id="trigger-modal" class="similar-background-color-2 hover-green similar-color-1" type="button" name="registerButton" onclick="document.getElementById('registration-form').style.display='block'"><b>REGISTER</b></button>
+                    </center>
+                </div>
+            </div>
+
+            <!-- ABOUT SECTION -->
+            <div class="w3-container custom-color" id="about" style="margin-top:80px; margin-bottom:110px">
+                <!-- Heading -->
+                <h1 class="w3-xxxlarge custom-color w3-center" ><b>About Carbon Tiptoe</b></h1>
+
+                <!-- Content -->
+                <div align="justify" class="w3-large custom-color w3-content" style="max-width:900px">
+                    <!-- Text -->
+                    <p>Carbon Tiptoe is a free web-based carbon footprint calculator. Our easy-to-use calculator is suitable for users ranging from individuals to large organizations. Once you have obtained a score, you will be able to see how you compare to other users.</p>
+                    <p>In addition, Carbon Tiptoe provides personalized feedback based on your input that helps improve your carbon footprint. To get started, simply register now!</p>
+
+                    <!-- Image -->
+                    <img src="footprints.jpg" alt="Footprints in a forest" style="width:100%;max-width:900px" class="w3-margin-top">
+                </div>
+            </div>
+
+
+            <!-- HOW IT WORKS SECTION -->
+            <div class="w3-row w3-padding-32" id="how-it-works" style="margin-top:80px; margin-bottom: 80px; margin-left:60px; margin-right:60px">
+                <!-- Heading and Text -->
+                <div align ="justify" class="w3-col m6 w3-padding-large custom-color">
+                    <h1 class="w3-xxxlarge custom-color w3-center" ><b>How does it work?</b></h1>
+                    <p class="w3-large">Carbon Tiptoe asks you a series of questions related to your carbon footprint. Based on your input, Carbon Tiptoe uses a specialized algorithm to calculate your result. We strive to constantly refine our algorithm in order to ensure the most accurate results.</p>
+                    <p class="w3-large">The types of questions asked range from travel habits to waste disposal. We aim to cover every possible aspect in calculating your footprint. Carbon Tiptoe then gives personalized feedback which you can implement to help improve your footprint.</p>
+                </div>
+            
+                <!-- Image -->
+                <div class="w3-col m6 w3-padding-large w3-hide-small">
+                    <img src="art.jpg" alt="Carbon footprint art" class="w3-round w3-image w3-opacity-min" width="600" height="750">
+                </div>
+            </div>
+
+
+             <!-- HISTORY SECTION -->
+            <div class="w3-row w3-padding-32" id="history" style="margin-top:80px; margin-bottom: 80px; margin-left:60px; margin-right:60px">
+                <!-- Image -->
+                <div class="w3-col m6 w3-padding-large w3-hide-small">
+                    <img src="factory.jpg" alt="Factory emitting fumes" class="w3-round w3-image w3-opacity-min"  width="600" height="750">
+                </div>
+            
+                <!-- Heading and Text -->
+                <div align="justify" class="w3-col m6 w3-padding-large custom-color">
+                    <h1 class="w3-xxxlarge custom-color w3-center" ><b>History </b></h1>
+                    <p class="w3-large">The concept and name of the carbon footprint was derived from the ecological footprint concept, which was developed by William E. Rees and Mathis Wackernagel in the 1990s.  </p>
+                    <p class="w3-large">The idea of a personal carbon footprint was popularized by a large advertising campaign of the fossil fuel company BP in 2005, designed by Ogilvy. It instructed people to calculate their personal footprints and provided ways for people to "go on a low-carbon diet". This strategy, also employed by other major fossil fuel companies borrowed heavily from previous campaigns by the tobacco industry and plastics industry.</p>
+                    <p class="w3-large">Source: <a href="https://en.wikipedia.org/wiki/Carbon_footprint" target="_blank">https://en.wikipedia.org/wiki/Carbon_footprint</a></p>
+                </div>
+            </div>
+
+
+            <!-- STATISTICS SECTION -->
+            <div class="w3-container" id="statistics" style="margin-top:80px; margin-bottom: 80px; margin-left:60px; margin-right:60px">
+                <!-- Heading -->
+                <h1 class="w3-xxxlarge custom-color w3-center" ><b>Statistics</b></h1>
+                
+                <!-- Statistic 1 -->
+                <div class="w3-row-padding" style="padding-top:10px">
+                   <div class="w3-col m4 w3-margin-bottom">
+                      <div class="custom-background-color">
+                         <img src="globe.jpg" alt="Carbon footprint globe" style="width:100%">
+                         <div class="w3-container">
+                            <h3>Worldwide usage</h3>
+                            <p>Users from over 124 countries have used Carbon Tiptoe to calculate their carbon footprint. </p>
+                         </div>
+                      </div>
+                   </div>
+
+                   <!-- Statistic 2 -->
+                   <div class="w3-col m4 w3-margin-bottom">
+                      <div class="custom-background-color">
+                         <img src="satisfaction.jpg" alt="Satisfaction" style="width:100%">
+                         <div class="w3-container">
+                            <h3>High user satisfaction</h3>
+                            <p>Over 80% of users report that Carbon Tiptoe's calculator is easy and useful.</p>
+                         </div>
+                      </div>
+                   </div>
+
+                   <!-- Statistic 3 -->
+                   <div class="w3-col m4 w3-margin-bottom">
+                      <div class="custom-background-color">
+                         <img src="buildings.jpg" alt="Buildings" style="width:100%">
+                         <div class="w3-container">
+                            <h3>Company usage</h3>
+                            <p>Of our users, 14% are companies looking to calculate their carbon footprint.</p>
+                         </div>
+                      </div>
+                   </div>
+
+                </div>
+            </div>
+
+
+            <!-- IMPROVE SECTION -->
+            <div class="w3-container" id="improve" style="margin-top:80px; margin-bottom: 80px">
+                <!-- Heading -->
+                <h1 class="w3-xxxlarge custom-color w3-center" ><b>Improve your Footprint</b></h1>
+                
+                <!-- Do and Avoid -->
+                <center>
+                    <div class="w3-row-padding" style="max-width:900px; padding-top:25px">
+                        <!-- Do table -->
+                        <div class="w3-half w3-margin-bottom" >
+                            <ul class="w3-ul custom-background-color w3-center">
+                                <li class="w3-green w3-xlarge w3-padding-32"><b>Do</b></li>
+                                <li class="w3-padding-16">Bring your own bags for shopping</li>
+                                <li class="w3-padding-16">Cycle or use public transport</li>
+                                <li class="w3-padding-16">Take short showers</li>
+                                <li class="w3-padding-16">Recycle your waste</li>
+                                <li class="w3-padding-16">Use energy efficient light bulbs</li>
+                            </ul>
+                        </div>
+
+                        <!-- Avoid table -->
+                        <div class="w3-half">
+                            <ul class="w3-ul custom-background-color w3-center">
+                                <li class="w3-red w3-xlarge w3-padding-32"><b>Avoid</b></li>
+                                <li class="w3-padding-16">Using plastic bags for shopping</li>
+                                <li class="w3-padding-16">Excessive usage of private cars</li>
+                                <li class="w3-padding-16">Wasting water when showering</li>
+                                <li class="w3-padding-16">Disposing large amounts of waste</li>
+                                <li class="w3-padding-16">Wasting electricity unnecessarily</li>
+                            </ul>
+                        </div>
+                    </div>
+                </center>
+            </div>
+        </div>
+        <!-- END OF PAGE CONTENT -->
+
+
+        <!-- FOOTER -->
+        <div class="similar-background-color-3">
+            <footer class="w3-padding-32 w3-center" style="width:100%">
+               <div class="w3-xlarge w3-section" style="margin-left:340px;margin-right:40px">
+                  <p class="w3-large w3-center similar-color-1">Get in  touch:</p>
+                 <i class="fa fa-facebook-official w3-hover-opacity w3-xlarge similar-color-1"></i>
+                 <i class="fa fa-instagram w3-hover-opacity w3-xlarge similar-color-1"></i>
+                 <i class="fa fa-snapchat w3-hover-opacity w3-xlarge similar-color-1"></i>
+                 <i class="fa fa-pinterest-p w3-hover-opacity w3-xlarge similar-color-1"></i>
+                 <i class="fa fa-twitter w3-hover-opacity w3-xlarge similar-color-1"></i>
+                 <i class="fa fa-linkedin w3-hover-opacity w3-xlarge similar-color-1"></i>
+               </div>
+            </footer>
+        </div>
+        
+    </body>
+</html>

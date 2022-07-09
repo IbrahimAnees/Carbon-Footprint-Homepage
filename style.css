@@ -1,0 +1,56 @@
+/* Main custom color */
+.custom-color {
+    color: #C1876B;
+}
+
+
+/* Main custom background color */
+.custom-background-color {
+  background-color: #C1876B
+}
+
+
+/* Color palette */
+.similar-color-1 {
+  color: #FFE2D4
+}
+
+.similar-color-2 {
+  color: #472515
+}
+
+.similar-background-color-1 {
+  background-color: #FFE2D4
+}
+
+.similar-background-color-2 {
+  background-color: #472515
+}
+
+.similar-background-color-3 {
+  background-color: #361700
+}
+
+.complementary-color {
+  color: #48816D
+}
+
+.complementary-background-color {
+  background-color: #48816D
+}
+
+
+/* Button design */
+.hover-green:hover{
+  color:#fff!important;
+  background-color:#64cc6d!important;
+}
+
+button {
+  font-size: 24px;
+  border-radius: 17px;
+  padding: 15px 50px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border: 0px solid;
+}
